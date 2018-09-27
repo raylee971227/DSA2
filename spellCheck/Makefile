@@ -1,7 +1,7 @@
 spell.exe: main.o hash.o
 	g++ -o spell.exe main.o hash.o
 
-spellcheck.o: main.cpp hash.h
+main.o: main.cpp hash.h
 	g++ -c main.cpp
 
 hash.o: hash.cpp hash.h
