@@ -1,10 +1,9 @@
 //
-// Created by Sangwon Lee on 9/24/18.
+// Created by Sangwon Lee on 10/13/18.
 //
 
-#ifndef SPELLCHECK_HASH_H
-#define SPELLCHECK_HASH_H
-
+#ifndef SPELL_HASHTABLE_H
+#define SPELL_HASHTABLE_H
 
 #include <vector>
 #include <string>
@@ -85,5 +84,4 @@ private:
     static unsigned int getPrime(int size);
 };
 
-
-#endif //SPELLCHECK_HASH_H
+#endif //SPELL_HASHTABLE_H

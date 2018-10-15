@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <string>
 
-#include "hash.h"
+#include "HashTable.h"
 
 using namespace std;
 
