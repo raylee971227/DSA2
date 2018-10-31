@@ -4,7 +4,18 @@
 
 #ifndef HEAP_HEAP_H
 
+#include <string>
+#include <vector>
+#include <iostream>
+#include <stdlib.h>
+#include <climits>
+#include "hash.h"
+
+
+using namespace std;
+
 class heap {
+public:
     //
     // heap - The constructor allocates space for the nodes of the heap
     // and the mapping (hash table) based on the specified capacity
@@ -66,6 +77,26 @@ class heap {
     //
     int remove(const std::string &id, int *pKey = NULL, void *ppData = NULL);
 
+private:
+
+    // node class
+    class node {
+    public:
+        string id; //The id of this node
+        int key; // The key of this node
+        void *pData; //A pointer to the actual data
+    };
+
+    vector<node> data; //actual binary heap
+    hashTable *mapping; //maps ids to node pointers
+    int filled;
+    int capacity;
+
+    // Get the index in array from a node's pointer
+    int getIndex(node * ptr);
+
+    void percolateUp(int posCur);
+    void percolateDown(int posCur);
 };
 
 #define HEAP_HEAP_H
